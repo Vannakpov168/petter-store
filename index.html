@@ -12,24 +12,32 @@
             color: #000000;
         }
 
-        /* ជម្រើសទី ២: Modern Dark Glass / Navy Blue Navigation Button Style */
+        /* Navigation Button Style: Modern Dark Glass / Navy Blue */
         .navy-dark-btn {
-            background: rgba(15, 23, 42, 0.92); /* Navy / Dark Slate #0f172a */
+            background: rgba(15, 23, 42, 0.92);
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
-            color: #fef08a; /* ពណ៌លឿងស្រាល Soft Yellow */
+            color: #fef08a;
             font-weight: 700;
-            border: 1px solid rgba(59, 130, 246, 0.3); /* Border ខៀវស្រាលសុីជាមួយស៊ុម */
+            border: 1px solid rgba(59, 130, 246, 0.3);
             border-radius: 8px;
             transition: all 0.3s ease;
             box-shadow: 0 2px 5px rgba(15, 23, 42, 0.2);
         }
         .navy-dark-btn:hover {
-            background: #2563eb; /* ប្តូរទៅពណ៌ខៀវ Bright Blue ពេល Hover */
+            background: #2563eb;
             color: #ffffff;
             border-color: #60a5fa;
             box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35);
             transform: translateY(-1px);
+        }
+
+        /* Company Badge Style (រចនាថ្មី៖ Tech Blue Gradient ទាក់ទាញ & មិនច្រឡំគេ) */
+        .company-badge {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+            color: #38bdf8;
+            border: 1px solid #60a5fa;
+            box-shadow: 0 2px 6px rgba(30, 58, 138, 0.25);
         }
 
         /* Apple Glassmorphism Base Style for Configure Order Button */
@@ -49,9 +57,8 @@
             text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
         }
 
-        /* Green Glass Hover Effect for Configure Order Button */
         .apple-glass-btn:hover {
-            background: rgba(34, 197, 94, 0.85); /* Apple Emerald Green Glass */
+            background: rgba(34, 197, 94, 0.85);
             color: #ffffff;
             border-color: rgba(134, 239, 172, 0.9);
             box-shadow: 0 10px 25px 0 rgba(34, 197, 94, 0.4), 
@@ -71,7 +78,7 @@
     <!-- MAIN CONTAINER WITH BLUE BORDER -->
     <div class="border-2 border-blue-600 p-2 max-w-[1400px] mx-auto">
 
-        <!-- TOP NAVIGATION CATEGORIES (NAVY BLUE STYLE) -->
+        <!-- TOP NAVIGATION CATEGORIES -->
         <div class="flex flex-wrap gap-1 md:gap-2 justify-between items-center mb-3 bg-blue-50/50 p-1.5 border border-blue-400 rounded-lg">
             <a href="#laptop" class="navy-dark-btn px-3 py-1.5 text-xs flex-1 text-center">LAPTOP</a>
             <a href="#desktop" class="navy-dark-btn px-3 py-1.5 text-xs flex-1 text-center">DESKTOP</a>
@@ -84,22 +91,22 @@
             <a href="#accessories" class="navy-dark-btn px-3 py-1.5 text-xs flex-1 text-center">ACCESSORIES</a>
         </div>
 
-        <!-- PRODUCTS GRID (4 COLUMNS WITH BLUE DIVIDER LINES) -->
+        <!-- PRODUCTS GRID (4 COLUMNS) -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x-2 divide-blue-500 text-xs leading-relaxed">
 
             <!-- COLUMN 1 -->
             <div class="p-3 flex flex-col justify-between items-center text-center">
                 <div>
-                    <!-- Product Image -->
                     <div class="h-44 flex items-center justify-center mb-2">
                         <img src="razer14.jpg" alt="Razer Blade 14" class="max-h-full object-contain" onerror="this.onerror=null; this.src='https://via.placeholder.com/200x150?text=Razer+Blade+14';">
                     </div>
                     
-                    <span class="bg-yellow-400 text-black px-3 py-0.5 rounded-full font-italic font-bold text-[11px] inline-block mb-1 border border-black shadow-sm">Default Company</span>
+                    <!-- Company Badge ថ្មី -->
+                    <span class="company-badge px-3 py-0.5 rounded-full font-bold text-[11px] inline-block mb-1">Default Company</span>
+                    
                     <h3 class="text-blue-700 font-bold text-sm mb-1">Razer Blade 14 OLED Gaming</h3>
                     <div class="text-2xl font-bold text-gray-800 mb-2">$2,399</div>
 
-                    <!-- Specs List -->
                     <div class="text-left space-y-0.5 text-[11px] text-gray-900 border-t border-gray-300 pt-2">
                         <p>- CPU : <span class="font-bold">AMD Ryzen™ AI 9 365 (10C/20T)</span></p>
                         <p>- 32GB LPDDR5X | M.2 1TB PCIe 4</p>
@@ -132,7 +139,9 @@
                         <img src="razer14_2.jpg" alt="Razer Blade 14" class="max-h-full object-contain" onerror="this.onerror=null; this.src='https://via.placeholder.com/200x150?text=Razer+Blade+14';">
                     </div>
                     
-                    <span class="bg-yellow-400 text-black px-3 py-0.5 rounded-full font-italic font-bold text-[11px] inline-block mb-1 border border-black shadow-sm">Default Company</span>
+                    <!-- Company Badge ថ្មី -->
+                    <span class="company-badge px-3 py-0.5 rounded-full font-bold text-[11px] inline-block mb-1">Default Company</span>
+                    
                     <h3 class="text-blue-700 font-bold text-sm mb-1">Razer Blade 14 OLED Gaming</h3>
                     <div class="text-2xl font-bold text-gray-800 mb-2">$2,399</div>
 
@@ -168,7 +177,9 @@
                         <img src="legion_pro7.jpg" alt="LENOVO Legion Pro 7" class="max-h-full object-contain" onerror="this.onerror=null; this.src='https://via.placeholder.com/200x150?text=Legion+Pro+7';">
                     </div>
                     
-                    <span class="bg-yellow-400 text-black px-3 py-0.5 rounded-full font-italic font-bold text-[11px] inline-block mb-1 border border-black shadow-sm">Default Company</span>
+                    <!-- Company Badge ថ្មី -->
+                    <span class="company-badge px-3 py-0.5 rounded-full font-bold text-[11px] inline-block mb-1">Default Company</span>
+                    
                     <h3 class="text-blue-700 font-bold text-sm mb-1">LENOVO Legion Pro 7 16IAX10H</h3>
                     <div class="text-2xl font-bold text-gray-800 mb-2">$3,099</div>
 
@@ -206,7 +217,9 @@
                         <img src="legion_rtx5090.jpg" alt="Legion Pro 7 RTX 5090" class="max-h-full object-contain" onerror="this.onerror=null; this.src='https://via.placeholder.com/200x150?text=Legion+RTX+5090';">
                     </div>
                     
-                    <span class="bg-yellow-400 text-black px-3 py-0.5 rounded-full font-italic font-bold text-[11px] inline-block mb-1 border border-black shadow-sm">Default Company</span>
+                    <!-- Company Badge ថ្មី -->
+                    <span class="company-badge px-3 py-0.5 rounded-full font-bold text-[11px] inline-block mb-1">Default Company</span>
+                    
                     <h3 class="text-blue-700 font-bold text-sm mb-1">Legion Pro 7 16IAX10H | <span class="text-red-600">RTX 5090</span></h3>
                     <div class="text-2xl font-bold text-gray-800 mb-2">$4,299</div>
 
@@ -239,7 +252,7 @@
 
         </div>
 
-        <!-- BOTTOM BRAND NAVIGATION BAR (NAVY BLUE STYLE) -->
+        <!-- BOTTOM BRAND NAVIGATION BAR -->
         <div class="mt-4 pt-2 border-t-2 border-blue-600 flex flex-wrap items-center gap-1 md:gap-2">
             <div class="bg-red-600 text-white font-bold px-4 py-1.5 text-sm uppercase tracking-wider rounded-md shadow-sm">
                 Lenovo
