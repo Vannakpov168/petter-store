@@ -12,65 +12,34 @@
             color: #000000;
         }
 
-        /* Apple Glass Button Style */
-        .glass-btn-yellow {
-            background: rgba(250, 204, 21, 0.85);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+        /* Pure Apple Glassmorphism Style for Configure Order Button */
+        .apple-glass-btn {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            border-right: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 20px 0 rgba(31, 38, 135, 0.15), 
+                        inset 0 1px 1px 0 rgba(255, 255, 255, 0.8);
             color: #000000;
             font-weight: bold;
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            box-shadow: 0 4px 15px rgba(250, 204, 21, 0.3);
-            border-radius: 20px;
-            transition: all 0.3s ease;
-        }
-        .glass-btn-yellow:hover {
-            background: rgba(234, 179, 8, 0.95);
-            box-shadow: 0 6px 20px rgba(234, 179, 8, 0.5);
-            transform: translateY(-1px);
+            border-radius: 12px;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
         }
 
-        /* Apple Dark Glass Navigation Button */
-        .glass-nav-btn {
-            background: rgba(28, 25, 23, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            color: #facc15;
-            font-weight: bold;
-            font-size: 14px;
-            padding: 6px 16px;
-            border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            display: inline-block;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        .glass-nav-btn:hover {
-            background: rgba(0, 0, 0, 0.95);
-            color: #ffffff;
-            border-color: rgba(250, 204, 21, 0.5);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        .apple-glass-btn:hover {
+            background: rgba(255, 255, 255, 0.45);
+            border-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 10px 25px 0 rgba(31, 38, 135, 0.25), 
+                        inset 0 1px 2px 0 rgba(255, 255, 255, 1);
+            transform: translateY(-1.5px);
         }
 
-        /* Apple Dark Glass Sub Navigation Button */
-        .glass-sub-nav-btn {
-            background: rgba(28, 25, 23, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            color: #facc15;
-            font-weight: bold;
-            font-size: 13px;
-            padding: 6px 14px;
-            border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            display: inline-block;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        .glass-sub-nav-btn:hover {
-            background: rgba(0, 0, 0, 0.95);
-            color: #ffffff;
+        .apple-glass-btn:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 10px 0 rgba(31, 38, 135, 0.15);
         }
     </style>
 </head>
@@ -79,17 +48,17 @@
     <!-- MAIN CONTAINER WITH BLUE BORDER -->
     <div class="border-2 border-blue-600 p-2 max-w-[1400px] mx-auto">
 
-        <!-- TOP NAVIGATION CATEGORIES -->
+        <!-- TOP NAVIGATION CATEGORIES (Original Style) -->
         <div class="flex flex-wrap gap-1 md:gap-2 justify-between items-center mb-3 bg-gray-100 p-1 border border-blue-400">
-            <a href="#laptop" class="glass-nav-btn flex-1 text-center">LAPTOP</a>
-            <a href="#desktop" class="glass-nav-btn flex-1 text-center">DESKTOP</a>
-            <a href="#pcpart" class="glass-nav-btn flex-1 text-center">PC PART</a>
-            <a href="#used" class="glass-nav-btn flex-1 text-center">USEDCOMPUTER</a>
-            <a href="#peripherals" class="glass-nav-btn flex-1 text-center">PERIPHERALS</a>
-            <a href="#storage" class="glass-nav-btn flex-1 text-center">STORAGE</a>
-            <a href="#network" class="glass-nav-btn flex-1 text-center">NETWORK</a>
-            <a href="#speaker" class="glass-nav-btn flex-1 text-center">SPEAKER</a>
-            <a href="#accessories" class="glass-nav-btn flex-1 text-center">ACCESSORIES</a>
+            <a href="#laptop" class="bg-stone-900 text-yellow-400 font-bold px-3 py-1.5 rounded-lg text-sm border border-yellow-500/30 hover:bg-black flex-1 text-center">LAPTOP</a>
+            <a href="#desktop" class="bg-stone-900 text-yellow-400 font-bold px-3 py-1.5 rounded-lg text-sm border border-yellow-500/30 hover:bg-black flex-1 text-center">DESKTOP</a>
+            <a href="#pcpart" class="bg-stone-900 text-yellow-400 font-bold px-3 py-1.5 rounded-lg text-sm border border-yellow-500/30 hover:bg-black flex-1 text-center">PC PART</a>
+            <a href="#used" class="bg-stone-900 text-yellow-400 font-bold px-3 py-1.5 rounded-lg text-sm border border-yellow-500/30 hover:bg-black flex-1 text-center">USEDCOMPUTER</a>
+            <a href="#peripherals" class="bg-stone-900 text-yellow-400 font-bold px-3 py-1.5 rounded-lg text-sm border border-yellow-500/30 hover:bg-black flex-1 text-center">PERIPHERALS</a>
+            <a href="#storage" class="bg-stone-900 text-yellow-400 font-bold px-3 py-1.5 rounded-lg text-sm border border-yellow-500/30 hover:bg-black flex-1 text-center">STORAGE</a>
+            <a href="#network" class="bg-stone-900 text-yellow-400 font-bold px-3 py-1.5 rounded-lg text-sm border border-yellow-500/30 hover:bg-black flex-1 text-center">NETWORK</a>
+            <a href="#speaker" class="bg-stone-900 text-yellow-400 font-bold px-3 py-1.5 rounded-lg text-sm border border-yellow-500/30 hover:bg-black flex-1 text-center">SPEAKER</a>
+            <a href="#accessories" class="bg-stone-900 text-yellow-400 font-bold px-3 py-1.5 rounded-lg text-sm border border-yellow-500/30 hover:bg-black flex-1 text-center">ACCESSORIES</a>
         </div>
 
         <!-- PRODUCTS GRID (4 COLUMNS WITH BLUE DIVIDER LINES) -->
@@ -123,7 +92,8 @@
                 </div>
 
                 <div class="w-full mt-3">
-                    <a href="https://t.me/PovVannak168?text=សួស្តី!%20ខ្ញុំចង់កម្ម៉ង់%20Razer%20Blade%2014" target="_blank" class="glass-btn-yellow w-full py-1.5 text-center block mb-2 text-xs">
+                    <!-- Apple Glassmorphism Button -->
+                    <a href="https://t.me/PovVannak168?text=សួស្តី!%20ខ្ញុំចង់កម្ម៉ង់%20Razer%20Blade%2014" target="_blank" class="apple-glass-btn w-full py-2 text-center block mb-2 text-xs">
                         Configure Order
                     </a>
                     <div class="text-left text-[11px] space-y-0.5">
@@ -159,7 +129,8 @@
                 </div>
 
                 <div class="w-full mt-3">
-                    <a href="https://t.me/PovVannak168?text=សួស្តី!%20ខ្ញុំចង់កម្ម៉ង់%20Razer%20Blade%2014" target="_blank" class="glass-btn-yellow w-full py-1.5 text-center block mb-2 text-xs">
+                    <!-- Apple Glassmorphism Button -->
+                    <a href="https://t.me/PovVannak168?text=សួស្តី!%20ខ្ញុំចង់កម្ម៉ង់%20Razer%20Blade%2014" target="_blank" class="apple-glass-btn w-full py-2 text-center block mb-2 text-xs">
                         Configure Order
                     </a>
                     <div class="text-left text-[11px] space-y-0.5">
@@ -196,7 +167,8 @@
                 </div>
 
                 <div class="w-full mt-3">
-                    <a href="https://t.me/PovVannak168?text=សួស្តី!%20ខ្ញុំចង់កម្ម៉ង់%20Legion%20Pro%207" target="_blank" class="glass-btn-yellow w-full py-1.5 text-center block mb-2 text-xs">
+                    <!-- Apple Glassmorphism Button -->
+                    <a href="https://t.me/PovVannak168?text=សួស្តី!%20ខ្ញុំចង់កម្ម៉ង់%20Legion%20Pro%207" target="_blank" class="apple-glass-btn w-full py-2 text-center block mb-2 text-xs">
                         Configure Order
                     </a>
                     <div class="text-left text-[11px] space-y-0.5">
@@ -234,7 +206,8 @@
                 </div>
 
                 <div class="w-full mt-3">
-                    <a href="https://t.me/PovVannak168?text=សួស្តី!%20ខ្ញុំចង់កម្ម៉ង់%20Legion%20Pro%207%20RTX%205090" target="_blank" class="glass-btn-yellow w-full py-1.5 text-center block mb-2 text-xs">
+                    <!-- Apple Glassmorphism Button -->
+                    <a href="https://t.me/PovVannak168?text=សួស្តី!%20ខ្ញុំចង់កម្ម៉ង់%20Legion%20Pro%207%20RTX%205090" target="_blank" class="apple-glass-btn w-full py-2 text-center block mb-2 text-xs">
                         Configure Order
                     </a>
                     <div class="text-left text-[11px] space-y-0.5">
@@ -247,206 +220,17 @@
 
         </div>
 
-        <!-- BOTTOM BRAND NAVIGATION BAR -->
+        <!-- BOTTOM BRAND NAVIGATION BAR (Original Style) -->
         <div class="mt-4 pt-2 border-t-2 border-blue-600 flex flex-wrap items-center gap-1 md:gap-2">
             <div class="bg-red-600 text-white font-bold px-4 py-1.5 text-sm uppercase tracking-wider rounded-md shadow-sm">
                 Lenovo
             </div>
             <div class="flex flex-wrap gap-1 md:gap-2 flex-1">
-                <a href="#ideapad" class="glass-sub-nav-btn flex-1 text-center">IDEAPAD</a>
-                <a href="#premium" class="glass-sub-nav-btn flex-1 text-center">PREMIUM</a>
-                <a href="#legion" class="glass-sub-nav-btn flex-1 text-center">LEGION | LOQ</a>
-                <a href="#thinkpad" class="glass-sub-nav-btn flex-1 text-center">THINKPAD | THINKBOOK</a>
-                <a href="#tablet" class="glass-sub-nav-btn flex-1 text-center">TABLET</a>
-            </div>
-        </div>
-
-    </div>
-
-</body>
-</html>            <a href="#used" class="glass-btn px-4 py-2 rounded-xl text-xs font-semibold flex-1 text-center">USED COMPUTER</a>
-            <a href="#peripherals" class="glass-btn px-4 py-2 rounded-xl text-xs font-semibold flex-1 text-center">PERIPHERALS</a>
-            <a href="#storage" class="glass-btn px-4 py-2 rounded-xl text-xs font-semibold flex-1 text-center">STORAGE</a>
-            <a href="#network" class="glass-btn px-4 py-2 rounded-xl text-xs font-semibold flex-1 text-center">NETWORK</a>
-            <a href="#accessories" class="glass-btn px-4 py-2 rounded-xl text-xs font-semibold flex-1 text-center">ACCESSORIES</a>
-        </div>
-
-        <!-- PRODUCTS GRID (4 COLUMNS Modern Cards) -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
-
-            <!-- PRODUCT CARD 1 -->
-            <div class="glass-card rounded-2xl p-4 flex flex-col justify-between hover:border-blue-500/40 transition duration-300">
-                <div>
-                    <!-- Product Image Container -->
-                    <div class="h-48 bg-gray-900/40 rounded-xl p-3 flex items-center justify-center mb-4 border border-white/5">
-                        <img src="razer14.jpg" alt="Razer Blade 14" class="max-h-full object-contain hover:scale-105 transition duration-300" onerror="this.onerror=null; this.src='https://via.placeholder.com/200x150?text=Razer+Blade+14';">
-                    </div>
-                    
-                    <div class="flex justify-between items-center mb-2">
-                        <span class="bg-blue-500/10 text-blue-400 border border-blue-500/20 px-2.5 py-0.5 rounded-full text-[10px] font-medium">In Stock</span>
-                        <span class="text-gray-400 text-[10px]">Code: 0001-RZ09</span>
-                    </div>
-
-                    <h3 class="text-white font-semibold text-base mb-1">Razer Blade 14 OLED Gaming</h3>
-                    <div class="text-2xl font-bold text-white mb-3">$2,399</div>
-
-                    <!-- Specs List -->
-                    <div class="space-y-1.5 text-gray-300 text-[11px] border-t border-white/10 pt-3">
-                        <p class="flex justify-between"><span class="text-gray-400">CPU:</span> <span class="font-medium text-white">AMD Ryzen™ AI 9 365</span></p>
-                        <p class="flex justify-between"><span class="text-gray-400">RAM/SSD:</span> <span>32GB LPDDR5X | 1TB PCIe</span></p>
-                        <p class="flex justify-between"><span class="text-gray-400">Display:</span> <span>14" WQXGA+ OLED 120Hz</span></p>
-                        <p class="flex justify-between"><span class="text-gray-400">GPU:</span> <span class="text-blue-400 font-medium">RTX™ 5070 8GB GDDR7</span></p>
-                        <p class="flex justify-between"><span class="text-gray-400">OS:</span> <span>Windows 11 License</span></p>
-                        <div class="mt-2 pt-2 border-t border-white/5 text-[10px] text-gray-400 space-y-0.5">
-                            <p>🎁 Free: Gaming Backpack, Razer Mouse</p>
-                            <p>🎁 Free: Mouse Pad, Cleaning Kit</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mt-4 pt-3 border-t border-white/10">
-                    <a href="https://t.me/PovVannak168?text=សួស្តី!%20ខ្ញុំចង់កម្ម៉ង់%20Razer%20Blade%2014" target="_blank" class="glass-btn-blue w-full py-2.5 rounded-xl font-semibold text-center block mb-3 text-xs tracking-wide">
-                        🛒 កម្ម៉ង់តាម Telegram
-                    </a>
-                    <div class="space-y-1 text-[11px] text-gray-400 bg-black/20 p-2 rounded-lg border border-white/5">
-                        <p class="flex justify-between"><span>RAM 32GB | 2TB PCIe</span> <span class="text-blue-400 font-bold">$2,529</span></p>
-                        <p class="flex justify-between"><span>RAM 32GB | 4TB PCIe</span> <span class="text-blue-400 font-bold">$2,839</span></p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PRODUCT CARD 2 -->
-            <div class="glass-card rounded-2xl p-4 flex flex-col justify-between hover:border-blue-500/40 transition duration-300">
-                <div>
-                    <div class="h-48 bg-gray-900/40 rounded-xl p-3 flex items-center justify-center mb-4 border border-white/5">
-                        <img src="razer14_2.jpg" alt="Razer Blade 14" class="max-h-full object-contain hover:scale-105 transition duration-300" onerror="this.onerror=null; this.src='https://via.placeholder.com/200x150?text=Razer+Blade+14';">
-                    </div>
-                    
-                    <div class="flex justify-between items-center mb-2">
-                        <span class="bg-blue-500/10 text-blue-400 border border-blue-500/20 px-2.5 py-0.5 rounded-full text-[10px] font-medium">In Stock</span>
-                        <span class="text-gray-400 text-[10px]">Code: 0002-RZ09</span>
-                    </div>
-
-                    <h3 class="text-white font-semibold text-base mb-1">Razer Blade 14 OLED Gaming</h3>
-                    <div class="text-2xl font-bold text-white mb-3">$2,399</div>
-
-                    <div class="space-y-1.5 text-gray-300 text-[11px] border-t border-white/10 pt-3">
-                        <p class="flex justify-between"><span class="text-gray-400">CPU:</span> <span class="font-medium text-white">AMD Ryzen™ AI 9 365</span></p>
-                        <p class="flex justify-between"><span class="text-gray-400">RAM/SSD:</span> <span>32GB LPDDR5X | 1TB PCIe</span></p>
-                        <p class="flex justify-between"><span class="text-gray-400">Display:</span> <span>14" WQXGA+ OLED 120Hz</span></p>
-                        <p class="flex justify-between"><span class="text-gray-400">GPU:</span> <span class="text-blue-400 font-medium">RTX™ 5070 8GB GDDR7</span></p>
-                        <p class="flex justify-between"><span class="text-gray-400">OS:</span> <span>Windows 11 License</span></p>
-                        <div class="mt-2 pt-2 border-t border-white/5 text-[10px] text-gray-400 space-y-0.5">
-                            <p>🎁 Free: Gaming Backpack, Razer Mouse</p>
-                            <p>🎁 Free: Mouse Pad, Cleaning Kit</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mt-4 pt-3 border-t border-white/10">
-                    <a href="https://t.me/PovVannak168?text=សួស្តី!%20ខ្ញុំចង់កម្ម៉ង់%20Razer%20Blade%2014" target="_blank" class="glass-btn-blue w-full py-2.5 rounded-xl font-semibold text-center block mb-3 text-xs tracking-wide">
-                        🛒 កម្ម៉ង់តាម Telegram
-                    </a>
-                    <div class="space-y-1 text-[11px] text-gray-400 bg-black/20 p-2 rounded-lg border border-white/5">
-                        <p class="flex justify-between"><span>RAM 32GB | 2TB PCIe</span> <span class="text-blue-400 font-bold">$2,529</span></p>
-                        <p class="flex justify-between"><span>RAM 32GB | 4TB PCIe</span> <span class="text-blue-400 font-bold">$2,839</span></p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PRODUCT CARD 3 -->
-            <div class="glass-card rounded-2xl p-4 flex flex-col justify-between hover:border-blue-500/40 transition duration-300">
-                <div>
-                    <div class="h-48 bg-gray-900/40 rounded-xl p-3 flex items-center justify-center mb-4 border border-white/5">
-                        <img src="legion_pro7.jpg" alt="LENOVO Legion Pro 7" class="max-h-full object-contain hover:scale-105 transition duration-300" onerror="this.onerror=null; this.src='https://via.placeholder.com/200x150?text=Legion+Pro+7';">
-                    </div>
-                    
-                    <div class="flex justify-between items-center mb-2">
-                        <span class="bg-purple-500/10 text-purple-400 border border-purple-500/20 px-2.5 py-0.5 rounded-full text-[10px] font-medium">Lenovo Legion</span>
-                        <span class="text-gray-400 text-[10px]">Code: SKU-16IAX</span>
-                    </div>
-
-                    <h3 class="text-white font-semibold text-base mb-1">LENOVO Legion Pro 7</h3>
-                    <div class="text-2xl font-bold text-white mb-3">$3,099</div>
-
-                    <div class="space-y-1.5 text-gray-300 text-[11px] border-t border-white/10 pt-3">
-                        <p class="flex justify-between"><span class="text-gray-400">CPU:</span> <span class="font-medium text-white">i9 Ultra 275HX 24C</span></p>
-                        <p class="flex justify-between"><span class="text-gray-400">RAM/SSD:</span> <span>32GB DDR5 | 1TB PCIe</span></p>
-                        <p class="flex justify-between"><span class="text-gray-400">Display:</span> <span>16" 2.5K OLED 240Hz</span></p>
-                        <p class="flex justify-between"><span class="text-gray-400">GPU:</span> <span class="text-blue-400 font-medium">RTX™ 5080 16GB GDDR7</span></p>
-                        <p class="flex justify-between"><span class="text-gray-400">Weight:</span> <span>2.36Kg | Eclipse Black</span></p>
-                        <div class="mt-2 pt-2 border-t border-white/5 text-[10px] text-gray-400 space-y-0.5">
-                            <p>🎁 Free: ROG BP2701 Backpack, Pad</p>
-                            <p>🎁 Free: T-Shirt FIFA 2026, Mouse G102</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mt-4 pt-3 border-t border-white/10">
-                    <a href="https://t.me/PovVannak168?text=សួស្តី!%20ខ្ញុំចង់កម្ម៉ង់%20Legion%20Pro%207" target="_blank" class="glass-btn-blue w-full py-2.5 rounded-xl font-semibold text-center block mb-3 text-xs tracking-wide">
-                        🛒 កម្ម៉ង់តាម Telegram
-                    </a>
-                    <div class="space-y-1 text-[11px] text-gray-400 bg-black/20 p-2 rounded-lg border border-white/5">
-                        <p class="flex justify-between"><span>RAM 32GB | 2TB</span> <span class="text-blue-400 font-bold">$3,229</span></p>
-                        <p class="flex justify-between"><span>RAM 64GB | 1TB</span> <span class="text-blue-400 font-bold">$3,399</span></p>
-                        <p class="flex justify-between"><span>RAM 64GB | 2TB</span> <span class="text-blue-400 font-bold">$3,529</span></p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PRODUCT CARD 4 -->
-            <div class="glass-card rounded-2xl p-4 flex flex-col justify-between hover:border-blue-500/40 transition duration-300">
-                <div>
-                    <div class="h-48 bg-gray-900/40 rounded-xl p-3 flex items-center justify-center mb-4 border border-white/5">
-                        <img src="legion_rtx5090.jpg" alt="Legion Pro 7 RTX 5090" class="max-h-full object-contain hover:scale-105 transition duration-300" onerror="this.onerror=null; this.src='https://via.placeholder.com/200x150?text=Legion+RTX+5090';">
-                    </div>
-                    
-                    <div class="flex justify-between items-center mb-2">
-                        <span class="bg-red-500/10 text-red-400 border border-red-500/20 px-2.5 py-0.5 rounded-full text-[10px] font-medium">Flagship RTX 5090</span>
-                        <span class="text-gray-400 text-[10px]">Code: SKU-5090</span>
-                    </div>
-
-                    <h3 class="text-white font-semibold text-base mb-1">Legion Pro 7 | RTX 5090</h3>
-                    <div class="text-2xl font-bold text-white mb-3">$4,299</div>
-
-                    <div class="space-y-1.5 text-gray-300 text-[11px] border-t border-white/10 pt-3">
-                        <p class="flex justify-between"><span class="text-gray-400">CPU:</span> <span class="font-medium text-white">i9 Ultra 275HX 24C</span></p>
-                        <p class="flex justify-between"><span class="text-gray-400">RAM/SSD:</span> <span>64GB DDR5 | 1TB PCIe</span></p>
-                        <p class="flex justify-between"><span class="text-gray-400">Display:</span> <span>16" WQXGA OLED 240Hz</span></p>
-                        <p class="flex justify-between"><span class="text-gray-400">GPU:</span> <span class="text-blue-400 font-medium">RTX™ 5090 24GB GDDR7</span></p>
-                        <p class="flex justify-between"><span class="text-gray-400">Weight:</span> <span>2.5Kg | Eclipse Black</span></p>
-                        <div class="mt-2 pt-2 border-t border-white/5 text-[10px] text-gray-400 space-y-0.5">
-                            <p>🎁 Free: ROG BP2701 Backpack, Pad</p>
-                            <p>🎁 Free: T-Shirt FIFA 2026, Mouse G102</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mt-4 pt-3 border-t border-white/10">
-                    <a href="https://t.me/PovVannak168?text=សួស្តី!%20ខ្ញុំចង់កម្ម៉ង់%20Legion%20Pro%207%20RTX%205090" target="_blank" class="glass-btn-blue w-full py-2.5 rounded-xl font-semibold text-center block mb-3 text-xs tracking-wide">
-                        🛒 កម្ម៉ង់តាម Telegram
-                    </a>
-                    <div class="space-y-1 text-[11px] text-gray-400 bg-black/20 p-2 rounded-lg border border-white/5">
-                        <p class="flex justify-between"><span>RAM 64GB | 1TB+1TB</span> <span class="text-blue-400 font-bold">$4,459</span></p>
-                        <p class="flex justify-between"><span>RAM 64GB | 1TB+2TB</span> <span class="text-blue-400 font-bold">$4,589</span></p>
-                        <p class="flex justify-between"><span>RAM 64GB | 2TB+2TB</span> <span class="text-blue-400 font-bold">$4,719</span></p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- BOTTOM BRAND NAVIGATION (Glass Style) -->
-        <div class="glass-nav p-3 rounded-2xl flex flex-wrap items-center gap-2">
-            <div class="bg-red-600/80 backdrop-blur-md text-white font-bold px-4 py-2 text-xs rounded-xl border border-red-500/30">
-                LENOVO
-            </div>
-            <div class="flex flex-wrap gap-2 flex-1">
-                <a href="#ideapad" class="glass-btn flex-1 text-center py-2 rounded-xl text-xs">IDEAPAD</a>
-                <a href="#premium" class="glass-btn flex-1 text-center py-2 rounded-xl text-xs">PREMIUM</a>
-                <a href="#legion" class="glass-btn flex-1 text-center py-2 rounded-xl text-xs">LEGION | LOQ</a>
-                <a href="#thinkpad" class="glass-btn flex-1 text-center py-2 rounded-xl text-xs">THINKPAD | THINKBOOK</a>
-                <a href="#tablet" class="glass-btn flex-1 text-center py-2 rounded-xl text-xs">TABLET</a>
+                <a href="#ideapad" class="bg-stone-900 text-yellow-400 font-bold px-3 py-1.5 rounded-lg text-xs border border-yellow-500/30 hover:bg-black flex-1 text-center">IDEAPAD</a>
+                <a href="#premium" class="bg-stone-900 text-yellow-400 font-bold px-3 py-1.5 rounded-lg text-xs border border-yellow-500/30 hover:bg-black flex-1 text-center">PREMIUM</a>
+                <a href="#legion" class="bg-stone-900 text-yellow-400 font-bold px-3 py-1.5 rounded-lg text-xs border border-yellow-500/30 hover:bg-black flex-1 text-center">LEGION | LOQ</a>
+                <a href="#thinkpad" class="bg-stone-900 text-yellow-400 font-bold px-3 py-1.5 rounded-lg text-xs border border-yellow-500/30 hover:bg-black flex-1 text-center">THINKPAD | THINKBOOK</a>
+                <a href="#tablet" class="bg-stone-900 text-yellow-400 font-bold px-3 py-1.5 rounded-lg text-xs border border-yellow-500/30 hover:bg-black flex-1 text-center">TABLET</a>
             </div>
         </div>
 
